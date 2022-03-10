@@ -1,12 +1,13 @@
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   name: servicebindings.servicecatalog.k8s.io
   labels:
     svcat: "true"
+  annotations:
+    api-approved.kubernetes.io: https://approve.me
 spec:
   group: servicecatalog.k8s.io
-  version: v1beta1
   scope: Namespaced
   names:
     plural: servicebindings
@@ -16,18 +17,25 @@ spec:
     categories:
       - all
       - svcat
-  additionalPrinterColumns:
-    - name: Service-Instance
-      type: string
-      JSONPath: .spec.instanceRef.name
-    - name: Secret-Name
-      type: string
-      JSONPath: .spec.secretName
-    - name: Status
-      type: string
-      JSONPath: .status.lastConditionState
-    - name: Age
-      type: date
-      JSONPath: .metadata.creationTimestamp
-  subresources:
-    status: {}
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      additionalPrinterColumns:
+        - name: Service-Instance
+          type: string
+          jsonPath: .spec.instanceRef.name
+        - name: Secret-Name
+          type: string
+          jsonPath: .spec.secretName
+        - name: Status
+          type: string
+          jsonPath: .status.lastConditionState
+        - name: Age
+          type: date
+          jsonPath: .metadata.creationTimestamp
+      schema:
+        openAPIV3Schema:
+          x-kubernetes-preserve-unknown-fields: true
+      subresources:
+        status: {}
