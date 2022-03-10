@@ -7,7 +7,7 @@
 {{- $cert := genSignedCert $cn nil (list $altName1 $altName2) 3650 $ca }}
 {{- $data = dict "ca.crt" (b64enc $ca.Cert) "tls.key" (b64enc $cert.Key) "tls.crt" (b64enc $cert.Cert) }}
 {{- end }}
-apiVersion: admissionregistration.k8s.io/v1beta1
+apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
   name: {{ template "fullname" . }}-webhook
@@ -20,6 +20,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/mutating-clusterservicebrokers"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -33,6 +38,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/mutating-clusterserviceclasses"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -46,6 +56,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/mutating-serviceclasses"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -59,6 +74,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/mutating-clusterserviceplans"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -72,6 +92,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/mutating-serviceplans"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -85,6 +110,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/mutating-servicebindings"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -98,6 +128,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/mutating-servicebrokers"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -111,13 +146,18 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/mutating-serviceinstances"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
     apiVersions: ["v1beta1"]
     resources: ["serviceinstances"]
 ---
-apiVersion: admissionregistration.k8s.io/v1beta1
+apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
   name: {{ template "fullname" . }}-validating-webhook
@@ -130,6 +170,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-servicebindings/status"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -143,6 +188,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-servicebrokers/status"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -156,6 +206,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-clusterservicebrokers/status"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -169,6 +224,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-serviceinstances"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -182,6 +242,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-clusterservicebrokers"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
     - operations: [ "CREATE", "UPDATE" ]
       apiGroups: ["servicecatalog.k8s.io"]
@@ -195,6 +260,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-servicebindings"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
   - operations: [ "CREATE", "UPDATE" ]
     apiGroups: ["servicecatalog.k8s.io"]
@@ -208,6 +278,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-servicebrokers"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
     - operations: [ "CREATE", "UPDATE" ]
       apiGroups: ["servicecatalog.k8s.io"]
@@ -221,6 +296,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-serviceclasses"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
     - operations: [ "CREATE", "UPDATE" ]
       apiGroups: ["servicecatalog.k8s.io"]
@@ -234,6 +314,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-clusterserviceclasses"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
     - operations: [ "CREATE", "UPDATE" ]
       apiGroups: ["servicecatalog.k8s.io"]
@@ -247,6 +332,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-serviceplans"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
     - operations: [ "CREATE", "UPDATE" ]
       apiGroups: ["servicecatalog.k8s.io"]
@@ -260,6 +350,11 @@ webhooks:
       namespace: "{{ .Release.Namespace }}"
       path: "/validating-clusterserviceplans"
   failurePolicy: Fail
+  matchPolicy: Exact
+  timeoutSeconds: 30s
+  sideEffects: Unknown
+  admissionReviewVersions:
+  - v1beta1
   rules:
     - operations: [ "CREATE", "UPDATE" ]
       apiGroups: ["servicecatalog.k8s.io"]
