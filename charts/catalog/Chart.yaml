@@ -1,4 +1,4 @@
 apiVersion: v1
 name: catalog
 description: service-catalog webhook server and controller-manager helm chart
-version: 0.3.2-patch-cbc-only-20220310
+version: 0.3.2-patch-20220310
