@@ -21,7 +21,7 @@ webhooks:
       path: "/mutating-clusterservicebrokers"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -39,7 +39,7 @@ webhooks:
       path: "/mutating-clusterserviceclasses"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -57,7 +57,7 @@ webhooks:
       path: "/mutating-serviceclasses"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -75,7 +75,7 @@ webhooks:
       path: "/mutating-clusterserviceplans"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -93,7 +93,7 @@ webhooks:
       path: "/mutating-serviceplans"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -111,7 +111,7 @@ webhooks:
       path: "/mutating-servicebindings"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -129,7 +129,7 @@ webhooks:
       path: "/mutating-servicebrokers"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -147,7 +147,7 @@ webhooks:
       path: "/mutating-serviceinstances"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -171,7 +171,7 @@ webhooks:
       path: "/validating-servicebindings/status"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -189,7 +189,7 @@ webhooks:
       path: "/validating-servicebrokers/status"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -207,7 +207,7 @@ webhooks:
       path: "/validating-clusterservicebrokers/status"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -225,7 +225,7 @@ webhooks:
       path: "/validating-serviceinstances"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -243,7 +243,7 @@ webhooks:
       path: "/validating-clusterservicebrokers"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -261,7 +261,7 @@ webhooks:
       path: "/validating-servicebindings"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -279,7 +279,7 @@ webhooks:
       path: "/validating-servicebrokers"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -297,7 +297,7 @@ webhooks:
       path: "/validating-serviceclasses"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -315,7 +315,7 @@ webhooks:
       path: "/validating-clusterserviceclasses"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -333,7 +333,7 @@ webhooks:
       path: "/validating-serviceplans"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
@@ -351,7 +351,7 @@ webhooks:
       path: "/validating-clusterserviceplans"
   failurePolicy: Fail
   matchPolicy: Exact
-  timeoutSeconds: 30s
+  timeoutSeconds: 30
   sideEffects: Unknown
   admissionReviewVersions:
   - v1beta1
