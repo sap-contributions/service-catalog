@@ -22,7 +22,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -40,7 +40,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -58,7 +58,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -76,7 +76,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -94,7 +94,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -112,7 +112,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -130,7 +130,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -148,7 +148,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -172,7 +172,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -190,7 +190,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -208,7 +208,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -226,7 +226,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -244,7 +244,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -262,7 +262,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -280,7 +280,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -298,7 +298,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -316,7 +316,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -334,7 +334,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
@@ -352,7 +352,7 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   timeoutSeconds: 30
-  sideEffects: Unknown
+  sideEffects: None
   admissionReviewVersions:
   - v1beta1
   rules:
